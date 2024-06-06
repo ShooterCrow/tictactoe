@@ -1,0 +1,49 @@
+.container {
+    text-align: center;
+}
+
+.title {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title span  {
+    color: cornflowerblue;
+    margin-left: 10px;
+}
+
+.reset {
+    width: 200px;
+    height: 70px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: cornflowerblue;
+    border-radius: 50px;
+    font-size: 22px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    font-weight: bold;
+    font-family: poppins;
+}
+
+.board {
+    width: 564px;
+    margin: auto;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.boxes {
+    /* display: flex; */
+    width: 100px;
+    height: 100px;
+    background: rgba(13, 7, 80, 0.795);
+    border-radius: 10px;
+    margin: 5px 5px 0px 0px;
+    cursor: pointer;
+}
