@@ -20,13 +20,14 @@
     border: none;
     outline: none;
     cursor: pointer;
-    background: cornflowerblue;
+    background: rgba(13, 7, 80, 0.795);
     border-radius: 50px;
     font-size: 22px;
     margin-top: 25px;
     margin-bottom: 50px;
     font-weight: bold;
     font-family: poppins;
+    color: aliceblue;
 }
 
 .board {
@@ -42,8 +43,14 @@
     /* display: flex; */
     width: 100px;
     height: 100px;
-    background: rgba(13, 7, 80, 0.795);
     border-radius: 10px;
     margin: 5px 5px 0px 0px;
     cursor: pointer;
+    background: cornflowerblue;
+    display: flex;
+    justify-content: center;align-items: center;
+}
+
+img {
+    width: 90px;
 }
