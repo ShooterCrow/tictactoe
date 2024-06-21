@@ -14,6 +14,7 @@ const TicTacToe = () => {
     for (let i = 0; i < 3; i++) {
       let box = document.createElement("div");
       console.log(box)
+      
       // <Test></Test>
       alert(box)
     }
