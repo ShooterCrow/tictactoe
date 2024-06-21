@@ -4,7 +4,7 @@ import "./index.css"
 
 function App() {
 
-  const [squares, setsquare] = useState(Array(9).fill(""))
+  const [squares, setSquares] = useState(Array(9).fill(""))
   const [play, setPlay] = useState("Circle")
   const [winNotice, setWinNotice] = useState("")
 
@@ -14,10 +14,14 @@ function App() {
     <div className='app'>
       <div className='board'>
         {squares.map((square, index) =>
-          <Square
+          <Square 
             key={index}
             id={index}
-            squares={square}
+            square={square}
+            play={play}
+            setPlay={setPlay}
+            squares={squares}
+            setSquares={setSquares}
           />
         )}
       </div>
