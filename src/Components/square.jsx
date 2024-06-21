@@ -6,7 +6,7 @@ const Square = ({ square, id, play, setPlay, squares, setSquares }) => {
   
   const handleClick = (e) => {
     const taken = e.target.classList.contains(play)
-    console.log(taken, play, e.target)
+    // console.log(taken, play, e.target)
 
     if (!taken) {
       if (play === "Circle") {
@@ -29,10 +29,10 @@ const Square = ({ square, id, play, setPlay, squares, setSquares }) => {
         return className
       } else {
         return square
-        // console.log(nextCell)
       }
     })
     setSquares(nextSquare)
+    console.log(nextSquare)
   }
 
 
@@ -40,7 +40,7 @@ const Square = ({ square, id, play, setPlay, squares, setSquares }) => {
     <div
       id={id}
       onClick={handleClick}
-      className="cell">
+      className="square">
       <img src=""/>
     </div>
   )
