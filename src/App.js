@@ -10,6 +10,26 @@ function App() {
 
   const notice = `${play}'s Turn`
 
+  const win = () => {
+    const winComb = [
+      // Row
+      [0,1,2],
+      [3,4,5],
+      [6,7,8],
+      // Column
+      [0,3,6],
+      [1,4,7],
+      [2,5,8],
+      // X
+      [0,4,8],
+      [2,4,6]
+    ]
+
+    winComb.forEach(x => {
+      const [a,b,c] = x
+    })
+  }
+
   return (
     <div className='app'>
       <div className='board'>

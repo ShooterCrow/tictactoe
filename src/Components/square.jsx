@@ -13,26 +13,26 @@ const Square = ({ square, id, play, setPlay, squares, setSquares }) => {
         e.target.setAttribute("src", circle)
         e.target.classList.add(play)
         setPlay("Cross")
-        handleSquareSwap("")
+        handleSquareSwap("circle")
       }
       if (play === "Cross") {
         e.target.setAttribute("src", cross)
         e.target.classList.add(play)
         setPlay("Circle")
+        handleSquareSwap("cross")
       }
     }
   }
 
-  const handleSquareSwap = (className) => {
+  const handleSquareSwap = (iconType) => {
     const nextSquare = squares.map((x, i) => {
       if (i === id) {
-        return className
+        return iconType
       } else {
         return square
       }
     })
     setSquares(nextSquare)
-    console.log(nextSquare)
   }
 
 
