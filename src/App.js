@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Square from './Components/square';
 import "./index.css" 
 
@@ -9,8 +9,12 @@ function App() {
   const [winNotice, setWinNotice] = useState("")
 
   const notice = `${play}'s Turn`
+  
+  const clearBoard = () => {
 
-  const win = () => {
+  }
+
+  const win = (icon) => {
     const winComb = [
       // Row
       [0,1,2],
@@ -26,9 +30,29 @@ function App() {
     ]
 
     winComb.forEach(x => {
-      const [a,b,c] = x
+      let winAlert = x.every(y => squares[y] === icon)
+      if (winAlert) {
+        setWinNotice(icon )
+        alert()
+      } 
+      // if (!winAlert) {
+      //   setWinNotice("")
+      // }
+        //ANOTJER WAY, BUT LONJER
+      // const [a,b,c] = x
+      // if (squares[a] === icon && squares[b] === icon && squares[c] === icon) {
+      //   setInterval(clearBoard, 500);
+      //   setWinNotice(icon+" wins");
+      // } else {
+      //   setWinNotice("")
+      // }
     })
+      
   }
+
+  useEffect(() => {
+    win()
+  }, [squares])
 
   return (
     <div className='app'>
