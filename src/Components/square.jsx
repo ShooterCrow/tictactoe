@@ -1,8 +1,8 @@
-import { useState } from "react"
+// import { useState } from "react"
 import circle from "../Components/Assets/O-icon.png"
 import cross from "../Components/Assets/X-icon.png"
 const Square = ({ square, id, play, setPlay, squares, setSquares, winNotice}) => {
-  const [icon, setIcon] = useState(circle)
+  // const [icon, setIcon] = useState(circle)
   
   const handleClick = (e) => {
     if (!winNotice) {
@@ -29,7 +29,7 @@ const Square = ({ square, id, play, setPlay, squares, setSquares, winNotice}) =>
   }
 
   const handleSquareSwap = (iconType) => {
-    const nextSquare = squares.map((x, i) => {
+    squares.map((x, i) => {
       if (i === id) {
         squares[i] = iconType
         return iconType
@@ -46,7 +46,7 @@ const Square = ({ square, id, play, setPlay, squares, setSquares, winNotice}) =>
       id={id}
       onClick={handleClick}
       className="square">
-      <img src=""/>
+      <img alt="" src=""/>
     </div>
   )
 }

@@ -30,28 +30,33 @@ function App() {
     ]
 
     winComb.forEach(x => {
-      let winAlert = x.every(y => squares[y] === icon)
-      if (winAlert) {
-        setWinNotice(icon + " Wins" )
-        alert()
-        return
-      } 
-      if (!winAlert) {
-        setWinNotice("")
-      }
-      // ANOTJER WAY, BUT LONJER
-      // const [a,b,c] = x
-      // if (squares[a] === icon && squares[b] === icon && squares[c] === icon) {
-      //   setInterval(clearBoard, 500);
-      //   setWinNotice(icon+" wins");
+      // let winAlert = x.every(y => squares[y] === icon)
+      // console.log(winAlert)
+      // if (winAlert) {
+      //   setWinNotice(icon + " Wins" )
+      //   alert()
+      //   return
+      // } 
+      // if (!winAlert) {
+      //   setWinNotice("")
       // }
+      // ANOTJER WAY, BUT LONJER
+      const [a,b,c] = x
+      console.log(squares[a],squares[b],squares[c])
+      if (squares[a] === icon && squares[b] === icon && squares[c] === icon) {
+        setInterval(clearBoard, 500);
+        setWinNotice(icon+" wins");
+        console.log(212)
+      } else {
+        console.log(squares)
+      }
     })
       
   }
 
-  // useEffect(() => {
-  //   win(play)
-  // }, [squares])
+  useEffect(() => {
+    win(play)
+  }, [play,squares])
 
   return (
     <div className='app'>
